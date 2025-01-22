@@ -5,90 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
     <style>
-        /* Estilos generales */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
         }
-
-        body {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(135deg, #f0f0f0, #ffffff);
-        }
-
         .form-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 3rem auto;
-            background: linear-gradient(135deg, #fff, #e0e0e0);
         }
-
         h1 {
-            font-size: 2.5rem;
-            color: #333;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
-
         label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #333;
+            margin: 10px 0 5px;
         }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
+        input[type="text"], input[type="email"], input[type="tel"] {
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
+            padding: 8px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
+            border-radius: 4px;
         }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus {
-            border-color: #5b98d8;
-        }
-
         input[type="submit"] {
             width: 100%;
-            padding: 0.75rem;
+            padding: 10px;
             background-color: #5b98d8;
             color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 4px;
+            font-size: 16px;
         }
-
         input[type="submit"]:hover {
-            background-color: #005bb5;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: auto;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 0;
+            background-color: #007aff;
         }
     </style>
 </head>
@@ -96,7 +51,7 @@
 
     <div class="form-container">
         <h1>Formulario de Contacto</h1>
-        <form action="datos_retintVR.php" method="POST">
+        <form id="contact-form">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -109,13 +64,34 @@
             <label for="telefono">Teléfono de Contacto</label>
             <input type="tel" id="telefono" name="telefono" required>
 
-            <input type="submit" value="Enviar">
+            <input type="button" value="Generar CSV" onclick="guardarDatosCSV()">
         </form>
     </div>
 
     <footer>
-        <p>&copy; 2025 VR Retiro. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Tu Empresa</p>
     </footer>
+
+    <script>
+        function guardarDatosCSV() {
+            // Obtener los datos del formulario
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var email = document.getElementById('email').value;
+            var telefono = document.getElementById('telefono').value;
+
+            // Crear el contenido del CSV
+            var csv = "nombre,apellido,email,telefono\n";
+            csv += `${nombre},${apellido},${email},${telefono}\n`;
+
+            // Crear un enlace de descarga para el archivo CSV
+            var hiddenElement = document.createElement('a');
+            hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+            hiddenElement.target = '_blank';
+            hiddenElement.download = 'datos_contacto.csv';
+            hiddenElement.click();
+        }
+    </script>
 
 </body>
 </html>
