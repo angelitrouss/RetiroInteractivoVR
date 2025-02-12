@@ -93,6 +93,22 @@
     margin-left: 260px;
     margin-bottom: 50px;
     max-width: 50%;
+    border-radius: 40px;
+}
+
+.hero-image2 img {
+    color: #333;
+    margin-left: 260px;
+    margin-bottom: 50px;
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.hero-image3 img {
+    color: #333;
+    margin-left: 260px;
+    margin-bottom: 50px;
+    max-width: 60%;
     border-radius: 10px;
 }
 
