@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Interactivo - Eventos en Vivo y Conexión Social</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="./index.html" class="logo logo-link">Retiro Interactivo</a>
+    </nav>
+
+    <!-- Sección principal (Hero) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Eventos en Vivo y Conexión Social</h1>
+            <p>Únete a una comunidad activa y disfruta de eventos culturales en vivo mientras te conectas con otros
+                usuarios. ¡Haz de tu retiro una experiencia única!</p>
+            <a href="#eventos" class="btn-primary">Explorar Eventos</a>
+        </div>
+        <div class="hero-image2">
+            <img src="imagenes/eventos.webp" alt="Eventos en Vivo">
+        </div>
+    </section>
+
+    <!-- Sección de Eventos en Vivo -->
+    <section class="info-section" id="eventos">
+        <h2>Eventos Culturales en Vivo</h2>
+        <p>En Retiro Interactivo, ofrecemos una plataforma donde puedes participar en eventos culturales en vivo, como
+            conciertos, talleres, charlas y más. Organiza, disfruta y comparte tus momentos con la comunidad.</p>
+
+        <div class="evento">
+            <h3>Concierto de Jazz en Vivo</h3>
+            <p>Una noche de jazz con talentosos músicos locales. ¡Una experiencia única que no te puedes perder!</p>
+            <button onclick="mostrarDetalles('concierto')">Ver más</button>
+            <div class="detalles" id="concierto" style="display: none;">
+                <p><strong>Fecha:</strong> 15 de diciembre de 2024</p>
+                <p><strong>Hora:</strong> 7:00 PM</p>
+                <p><strong>Ubicación:</strong> Sala de Conciertos Retiro Interactivo</p>
+                <p><strong>Descripción:</strong> Disfruta de una velada única con música en vivo, comida y un ambiente
+                    acogedor para relajarte y disfrutar de la buena música.</p>
+                <p><strong>Entradas:</strong> Disponibles en la app, ¡reserva tu lugar ahora!</p>
+            </div>
+        </div>
+
+        <div class="evento">
+            <h3>Taller de Pintura en Acuarela</h3>
+            <p>Explora tu creatividad y aprende a pintar en acuarela con expertos. ¡Un espacio para relajarte y
+                expresarte!</p>
+            <button onclick="mostrarDetalles('taller')">Ver más</button>
+            <div class="detalles" id="taller" style="display: none;">
+                <p><strong>Fecha:</strong> 20 de diciembre de 2024</p>
+                <p><strong>Hora:</strong> 10:00 AM</p>
+                <p><strong>Ubicación:</strong> Estudio Creativo Retiro Interactivo</p>
+                <p><strong>Descripción:</strong> En este taller aprenderás técnicas básicas de acuarela y cómo aplicar
+                    los principios del arte a tu propio estilo.</p>
+                <p><strong>Inscripción:</strong> Puedes inscribirte en línea a través de nuestra app.</p>
+            </div>
+        </div>
+
+        <div class="evento">
+            <h3>Charla sobre Bienestar y Mindfulness</h3>
+            <p>Participa en una charla sobre cómo el mindfulness puede mejorar tu vida y bienestar, especialmente
+                durante el retiro.</p>
+            <button onclick="mostrarDetalles('charla')">Ver más</button>
+            <div class="detalles" id="charla" style="display: none;">
+                <p><strong>Fecha:</strong> 25 de diciembre de 2024</p>
+                <p><strong>Hora:</strong> 6:00 PM</p>
+                <p><strong>Ubicación:</strong> Sala de Conferencias Retiro Interactivo</p>
+                <p><strong>Descripción:</strong> Aprende técnicas de mindfulness que puedes aplicar diariamente para
+                    reducir el estrés y mejorar tu bienestar mental.</p>
+                <p><strong>Regístrate:</strong> Inscripciones abiertas en la aplicación.</p>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- Sección de Conexión Social -->
+    <section class="info-section" id="conexion">
+        <h2>Conexión Social</h2>
+        <p>Crea una red social dentro de nuestra plataforma para compartir tus experiencias, fotos y recomendaciones con
+            otros usuarios. ¡Sé parte de una comunidad activa y apoyadora!</p>
+
+        <h3>Comparte tus Momentos</h3>
+        <p>Publica tus fotos, reflexiones y comentarios sobre los eventos y recorridos que has vivido. Inspira a otros a
+            unirse y disfrutar del retiro interactivo.</p>
+
+        <h3>Sistema de Recompensas</h3>
+        <p>Gana puntos por participar en eventos, completar recorridos o compartir contenido. Canjea tus puntos por
+            beneficios exclusivos como entradas VIP o descuentos.</p>
+
+        <div class="recompensas">
+            <h4>Puntos por Participación</h4>
+            <ul>
+                <li><strong>Asistir a un evento:</strong> 50 puntos</li>
+                <li><strong>Completar un recorrido:</strong> 30 puntos</li>
+                <li><strong>Publicar contenido:</strong> 10 puntos</li>
+            </ul>
+            <button onclick="mostrarRecompensas()">Ver más detalles</button>
+            <div class="detalles" id="recompensas" style="display: none;">
+                <p><strong>Beneficios:</strong> Canjea tus puntos por acceso exclusivo a eventos, productos, o
+                    actividades adicionales en nuestra plataforma.</p>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- Beneficios de Participar -->
+    <section class="info-section" id="beneficios">
+        <h2>Beneficios de Participar</h2>
+        <p>Formar parte de nuestra comunidad tiene múltiples ventajas, desde el acceso a eventos exclusivos hasta el
+            disfrute de actividades que mejoran tu calidad de vida. Aquí te contamos algunos de los beneficios:</p>
+
+        <ul>
+            <li><strong>Acceso a eventos exclusivos:</strong> Participa en actividades únicas que no se ofrecen en
+                ningún otro lugar.</li>
+            <li><strong>Mejora tu bienestar:</strong> Desde talleres de arte hasta charlas sobre mindfulness, todo está
+                diseñado para enriquecer tu vida.</li>
+            <li><strong>Recompensas y descuentos:</strong> Gana puntos por participar y canjéalos por beneficios como
+                entradas a eventos o productos exclusivos.</li>
+            <li><strong>Conexión con una comunidad activa:</strong> Comparte tu experiencia, haz nuevos amigos y
+                disfruta de un entorno positivo.</li>
+        </ul>
+    </section>
+    <br><br>
+    <!-- Sección de Testimonios -->
+    <section class="info-section" id="testimonios">
+        <h2>Testimonios</h2>
+        <p>Escucha a nuestros usuarios sobre cómo la plataforma ha mejorado su experiencia de retiro:</p>
+
+        <div class="testimonio">
+            <h3>Maria González</h3>
+            <p>"Participar en los talleres de arte me ha permitido descubrir una nueva pasión. La comunidad es
+                increíble, y siempre hay algo nuevo que aprender." </p>
+        </div>
+
+        <div class="testimonio">
+            <h3>Carlos López</h3>
+            <p>"El evento de mindfulness fue una experiencia transformadora. Me ha ayudado a encontrar paz en mi día a
+                día. ¡Lo recomiendo totalmente!"</p>
+        </div>
+
+        <div class="testimonio">
+            <h3>Ana Martínez</h3>
+            <p>"Las actividades culturales me han permitido mantenerme activa y conectada con otros. ¡Me encanta cómo la
+                app me motiva a seguir participando!"</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <p>&copy; 2025 VR Retiro. Todos los derechos reservados.</p>
+        <ul class="nav-links">
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+        <p>Contacta con nosotros: <a href="mailto:contacto@retirointeractivo.com">contacto@retirointeractivo.com</a></p>
+    </footer>
+
+    <!-- Script para mostrar detalles -->
+    <script>
+        function mostrarDetalles(id) {
+            var detalles = document.getElementById(id);
+            if (detalles.style.display === "none") {
+                detalles.style.display = "block";
+            } else {
+                detalles.style.display = "none";
+            }
+        }
+
+        function mostrarRecompensas() {
+            var detalles = document.getElementById('recompensas');
+            if (detalles.style.display === "none") {
+                detalles.style.display = "block";
+            } else {
+                detalles.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
