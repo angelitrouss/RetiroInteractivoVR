@@ -6,6 +6,14 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* Fondo para toda la página */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
+
 /* Barra de navegación */
 .navbar {
     display: flex;
@@ -41,7 +49,7 @@
     color: #007aff;
 }
 
-/* Sección principal */
+/* Sección principal (Hero) */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -51,7 +59,7 @@
 }
 
 .hero-text {
-    max-width: 50%
+    max-width: 50%;
 }
 
 .hero-text h1 {
@@ -81,31 +89,15 @@
 }
 
 .hero-image img {
-    color: #333;
     margin-left: 180px;
     margin-bottom: 50px;
     max-width: 35%;
     border-radius: 10px;
 }
 
-.hero-image1 img {
-    color: #333;
-    margin-left: 260px;
-    margin-bottom: 50px;
-    max-width: 48%;
-    border-radius: 40px;
-}
-
-.hero-image2 img {
-    color: #333;
-    margin-left: 260px;
-    margin-bottom: 50px;
-    max-width: 48%;
-    border-radius: 40px;
-}
-
+.hero-image1 img,
+.hero-image2 img,
 .hero-image3 img {
-    color: #333;
     margin-left: 260px;
     margin-bottom: 50px;
     max-width: 48%;
@@ -140,79 +132,19 @@
     margin-bottom: 0.5rem;
 }
 
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Logo sin estilo de enlace */
-.logo-link {
-    text-decoration: none;
-    color: inherit;
-    /* Mantiene el color del texto del logo */
-    font-weight: bold;
-    font-size: 1.5rem;
-    /* Ajusta el tamaño del logo */
-}
-
-.logo-link:hover {
-    color: inherit;
-    /* Evita el cambio de color al pasar el cursor */
-}
-
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Fondo para toda la página */
-body {
-    height: 100vh;
-    /* Ocupa toda la altura de la ventana */
-    display: flex;
-    flex-direction: column;
-    /* Hace que el footer esté al final */
-    background: linear-gradient(135deg, #f0f0f0, #ffffff);
-    /* Fondo degradado */
-}
-
-/* Sección de contacto */
-.info-section {
-    padding: 4rem 2rem;
-    background-color: #fff;
-    text-align: center;
-    flex-grow: 1;
-    /* Hace que ocupe el espacio disponible */
-    background: linear-gradient(135deg, #fff, #e0e0e0);
-    /* Fondo suave para la sección */
-}
-
+/* Sección de contacto (añadido para formulario/contacto) */
 .contact-title {
     font-size: 2.5rem;
-    /* Tamaño grande para el título */
     margin-bottom: 2rem;
-    /* Espacio debajo del título */
     font-weight: bold;
-    /* Hacemos que el título sea negrita */
     color: #333;
-    /* Color oscuro para el texto */
 }
 
 .contact-card {
     display: flex;
-    /* Usamos flexbox para alinear en filas */
     justify-content: space-between;
-    /* Distribuye los elementos en el espacio disponible */
     gap: 2rem;
-    /* Espacio entre los elementos */
     flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan si el espacio es pequeño */
     margin-top: 2rem;
     background-color: white;
     border-radius: 10px;
@@ -222,11 +154,8 @@ body {
 
 .contact-info {
     flex: 1;
-    /* Esto permite que cada columna ocupe el mismo espacio */
     min-width: 250px;
-    /* Establecemos un ancho mínimo para las columnas */
     max-width: 300px;
-    /* Y un ancho máximo para mantener un diseño uniforme */
 }
 
 .contact-info h4 {
@@ -257,15 +186,83 @@ body {
 
 /* Pie de página */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
     padding: 1rem;
+    background-color: #333;
+    color: #fff;
     margin-top: auto;
-    /* Hace que el footer se mantenga abajo */
     width: 100%;
 }
 
 footer p {
     margin: 0;
+}
+
+/* Logo sin estilo de enlace */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-link:hover {
+    color: inherit;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .nav-links li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .hero-image img,
+    .hero-image1 img,
+    .hero-image2 img,
+    .hero-image3 img {
+        margin: 0 auto;
+        display: block;
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+    
+    .info-section {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+    }
 }
