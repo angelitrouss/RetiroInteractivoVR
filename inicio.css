@@ -88,9 +88,10 @@ body {
     background-color: #005bb5;
 }
 
+/* Ajuste de imágenes en la sección Hero */
 .hero-image img {
-    margin-left: 180px;
-    margin-bottom: 50px;
+    display: block;
+    margin: 0 auto 50px auto;
     max-width: 35%;
     border-radius: 10px;
 }
@@ -98,8 +99,8 @@ body {
 .hero-image1 img,
 .hero-image2 img,
 .hero-image3 img {
-    margin-left: 260px;
-    margin-bottom: 50px;
+    display: block;
+    margin: 0 auto 50px auto;
     max-width: 48%;
     border-radius: 40px;
 }
@@ -132,7 +133,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Sección de contacto (añadido para formulario/contacto) */
+/* Sección de contacto (para formulario/contacto) */
 .contact-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -251,10 +252,8 @@ footer p {
     .hero-image1 img,
     .hero-image2 img,
     .hero-image3 img {
-        margin: 0 auto;
-        display: block;
+        margin: 0 auto 2rem auto;
         max-width: 90%;
-        margin-bottom: 2rem;
     }
     
     .info-section {
